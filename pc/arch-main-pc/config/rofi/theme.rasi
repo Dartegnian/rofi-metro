@@ -259,11 +259,11 @@
 }
 
 #inputbar {
-    children:   [ textbox-custom, entry, case-indicator, textbox-name, user-icon ];
+    children: [ textbox-custom, entry, case-indicator, container-name, user-icon ];
 	spacing: 20;
 	text-color: @normal-foreground;
-	padding: 1px;
-	margin: 0 0 50px 0;
+	padding: 0 15px 0px 0;
+	margin: 0 0 70px 0;
 }
 
 #case-indicator {
@@ -279,7 +279,7 @@
 #textbox-custom {
     expand: true;
 	content: "Start";
-	font: "Noto Sans 27";
+	font: "Noto Sans 34";
 	text-color: @normal-foreground;
 }
 
@@ -288,11 +288,27 @@
 	text-color: @normal-foreground;
 }
 
-#textbox-name {
+#container-name {
+	children: [
+		textbox-firstname,
+		textbox-secondname
+	];
+	orientation: vertical;
+    spacing: 0px;
     expand: false;
-	content: "Dartegnian";
-	padding: 0px;
-	border: 0px;
+}
+
+#textbox-firstname {
+	horizontal-align: 1;
+	font: "Noto Sans 17";
+	str: "Dartegnian";
+	text-color: @normal-foreground;
+}
+
+#textbox-secondname {
+	horizontal-align: 1;
+	font: "Noto Sans 12";
+	str: "Velarde";
 	text-color: @normal-foreground;
 }
 
@@ -300,6 +316,8 @@
 	expand: false;
 	padding: 0px;
 	width: 50px;
+	height: 10px;
+	margin: 0 0 13px 0;
 	border: 0px;
 	background-image: url("/usr/share/sddm/faces/dartegnian.face.icon", both);
 }
