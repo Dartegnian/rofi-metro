@@ -35,12 +35,118 @@
 	background-color: @active-background;
 	border: 0px;
 	border-color: @selected-active-background;
-	padding: 0px;
+	padding: 6%;
 }
 
 #mainbox {
+	children: [inputbar, message, container-start];
 	border: 0;
-	padding: 6%;
+}
+
+#container-start {
+	children: [container-custom-tiles, listview];
+	orientation: horizontal;
+}
+
+#container-custom-tiles {
+	children: [
+		button-tile-wide-email,
+		button-tile-wide-firefox,
+		container-tilerow-firstrow,
+		button-tile-wide-mpv,
+		container-tilerow-second
+	];
+	orientation: vertical;
+	expand: false;
+	width: 300px;
+	padding: 10px 0 0 0;
+}
+
+#button-tile-wide-email {
+	expand: false;
+	padding: 100px 10px 10px 10px;
+	content: "Thunderbird";
+	font: "Noto Sans 12";
+	text-color: @active-foreground;
+	background-image: url("./metro/tiles/regular/email.png", both);
+	background-color: #3a9ec8;
+}
+
+#button-tile-wide-firefox {
+	expand: false;
+	padding: 100px 10px 10px 10px;
+	content: "Firefox";
+	font: "Noto Sans 12";
+	text-color: @active-foreground;
+	background-image: url("./metro/tiles/regular/firefox.png", both);
+	background-color: #ea8600;
+}
+
+#container-tilerow-firstrow {
+	children: [
+		button-tile-small-steam,
+		button-tile-small-discord
+	];
+	orientation: horizontal;
+	width: 300px;
+	expand: false;
+}
+
+#button-tile-small-steam {
+	padding: 100px 10px 10px 10px;
+	content: "Steam";
+	font: "Noto Sans 12";
+	text-color: @active-foreground;
+	background-image: url("./metro/tiles/small/steam.png", both);
+	background-color: #0c4076;
+}
+
+#button-tile-small-discord {
+	padding: 100px 10px 10px 10px;
+	content: "Discord";
+	font: "Noto Sans 12";
+	text-color: @active-foreground;
+	background-image: url("./metro/tiles/small/discord.png", both);
+	background-color: #5865F2;
+}
+
+#button-tile-wide-mpv {
+	expand: false;
+	padding: 100px 10px 10px 10px;
+	content: "MPV";
+	font: "Noto Sans 12";
+	text-color: @active-foreground;
+	background-image: url("./metro/tiles/regular/mpv.png", both);
+	background-color: #672168;
+}
+
+/* TILES WITH PYWAL COLORS */
+#container-tilerow-second {
+	children: [
+		button-tile-small-code,
+		button-tile-small-terminal
+	];
+	orientation: horizontal;
+	width: 300px;
+	expand: false;
+}
+
+#button-tile-small-code {
+	padding: 100px 10px 10px 10px;
+	content: "Code";
+	font: "Noto Sans 12";
+	text-color: @active-foreground;
+	background-image: url("./metro/tiles/small/code.png", both);
+	background-color: @selected-normal-background;
+}
+
+#button-tile-small-terminal {
+	padding: 100px 10px 10px 10px;
+	content: "Terminal";
+	font: "Noto Sans 12";
+	text-color: @active-foreground;
+	background-image: url("./metro/tiles/small/terminal.png", both);
+	background-color: @urgent-background;
 }
 
 #message {
@@ -61,7 +167,8 @@
 }
 
 #listview {
-	columns: 6;
+	columns: 7;
+	fixed-columns: true;
 	spacing: 10px;
 	padding: 10px 0% 10px;
     border: 0px;
@@ -79,12 +186,15 @@
 }
 
 #element-text {
+	margin: 10px 0px 0px 0px;
+	font: "Noto Sans 12";
     text-color: inherit;
 }
 
 #element-icon {
 	horizontal-align: 0.5;
-    size: 49px;
+    size: 60px;
+	padding: 5px;
 }
 
 #element.normal.normal {
