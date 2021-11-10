@@ -1,6 +1,8 @@
 /**
- * ROFI Color theme
- * User: dartegnian
+ * ROFI Metro theme
+ * w/ pywal support
+ *
+ * Tiles not yet working(!!!)
  */
 
 @import "~/.cache/wal/colors-rofi-dark.rasi"
@@ -28,33 +30,39 @@
 	separatorcolor: @transparent;
 	background-color: @transparent;
 	spacing: 10;
+	text-color: @active-foreground;
+	font: "Noto Sans 12";
 }
 
 #window {
 	fullscreen: true;
 	background-color: @active-background;
-	border: 0px;
-	border-color: @selected-active-background;
 	padding: 6%;
 }
 
 #mainbox {
-	children: [inputbar, message, container-start];
-	border: 0;
+	children: [
+		inputbar,
+		message,
+		container-start-screen
+	];
 }
 
-#container-start {
-	children: [container-custom-tiles, listview];
+#container-start-screen {
+	children: [
+		container-metro-tiles,
+		listview
+	];
 	orientation: horizontal;
 }
 
-#container-custom-tiles {
+#container-metro-tiles {
 	children: [
 		button-tile-wide-email,
 		button-tile-wide-firefox,
-		container-tilerow-firstrow,
+		container-tile-row-first,
 		button-tile-wide-mpv,
-		container-tilerow-second
+		container-tile-row-second
 	];
 	orientation: vertical;
 	expand: false;
@@ -66,23 +74,21 @@
 	expand: false;
 	padding: 100px 10px 10px 10px;
 	content: "Thunderbird";
-	font: "Noto Sans 12";
-	text-color: @active-foreground;
 	background-image: url("./metro/tiles/regular/email.png", both);
 	background-color: #3a9ec8;
+	action: "kb-custom-1";
 }
 
 #button-tile-wide-firefox {
 	expand: false;
 	padding: 100px 10px 10px 10px;
 	content: "Firefox";
-	font: "Noto Sans 12";
-	text-color: @active-foreground;
 	background-image: url("./metro/tiles/regular/firefox.png", both);
 	background-color: #ea8600;
+	action: "kb-custom-2";
 }
 
-#container-tilerow-firstrow {
+#container-tile-row-first {
 	children: [
 		button-tile-small-steam,
 		button-tile-small-discord
@@ -95,33 +101,30 @@
 #button-tile-small-steam {
 	padding: 100px 10px 10px 10px;
 	content: "Steam";
-	font: "Noto Sans 12";
-	text-color: @active-foreground;
 	background-image: url("./metro/tiles/small/steam.png", both);
 	background-color: #0c4076;
+	action: "kb-custom-3";
 }
 
 #button-tile-small-discord {
 	padding: 100px 10px 10px 10px;
 	content: "Discord";
-	font: "Noto Sans 12";
-	text-color: @active-foreground;
 	background-image: url("./metro/tiles/small/discord.png", both);
 	background-color: #5865F2;
+	action: "kb-custom-4";
 }
 
 #button-tile-wide-mpv {
 	expand: false;
 	padding: 100px 10px 10px 10px;
 	content: "MPV";
-	font: "Noto Sans 12";
-	text-color: @active-foreground;
 	background-image: url("./metro/tiles/regular/mpv.png", both);
 	background-color: #672168;
+	action: "kb-custom-5";
 }
 
 /* TILES WITH PYWAL COLORS */
-#container-tilerow-second {
+#container-tile-row-second {
 	children: [
 		button-tile-small-code,
 		button-tile-small-terminal
@@ -134,23 +137,22 @@
 #button-tile-small-code {
 	padding: 100px 10px 10px 10px;
 	content: "Code";
-	font: "Noto Sans 12";
 	text-color: @active-foreground;
 	background-image: url("./metro/tiles/small/code.png", both);
 	background-color: @selected-normal-background;
+	action: "kb-custom-6";
 }
 
 #button-tile-small-terminal {
 	padding: 100px 10px 10px 10px;
 	content: "Terminal";
-	font: "Noto Sans 12";
-	text-color: @active-foreground;
 	background-image: url("./metro/tiles/small/terminal.png", both);
 	background-color: @urgent-background;
+	action: "kb-custom-7";
 }
 
 #message {
-	border: 2px 0px 0px;
+	border: 0px;
 	border-color: @separatorcolor;
 	padding: 10 1% 10;
 }
@@ -172,12 +174,10 @@
 	spacing: 10px;
 	padding: 10px 0% 10px;
     border: 0px;
-	border-color: @selected-normal-background;
 }
 
 #element {
     orientation: vertical;
-	border: 0px;
 	border-color: @selected-normal-background;
 	padding: 10px 10px 10px;
 	width: 20px;
@@ -187,7 +187,6 @@
 
 #element-text {
 	margin: 10px 0px 0px 0px;
-	font: "Noto Sans 12";
     text-color: inherit;
 }
 
@@ -242,7 +241,7 @@
 }
 
 #scrollbar {
-	width: 14px;
+	width: 0px;
 	border: 0;
 	handle-width: 8px;
 	padding: 0;
@@ -259,7 +258,12 @@
 }
 
 #inputbar {
-    children: [ textbox-custom, entry, case-indicator, container-name, user-icon ];
+    children: [
+		textbox-custom,
+		entry,
+		container-name,
+		user-icon
+	];
 	spacing: 20;
 	text-color: @normal-foreground;
 	padding: 0 15px 0px 0;
@@ -307,7 +311,6 @@
 
 #textbox-secondname {
 	horizontal-align: 1;
-	font: "Noto Sans 12";
 	str: "Velarde";
 	text-color: @normal-foreground;
 }
