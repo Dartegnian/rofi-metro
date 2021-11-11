@@ -137,7 +137,6 @@
 #button-tile-small-code {
 	padding: 100px 10px 10px 10px;
 	content: "Code";
-	text-color: @active-foreground;
 	background-image: url("./metro/tiles/small/code.png", both);
 	background-color: @selected-normal-background;
 	action: "kb-custom-6";
@@ -155,17 +154,6 @@
 	border: 0px;
 	border-color: @separatorcolor;
 	padding: 10 1% 10;
-}
-
-#textbox {
-	text-color: @foreground;
-}
-
-#textbox-prompt-colon {
-    expand: false;
-    str: "";
-    margin: 0px;
-    text-color: @normal-foreground;
 }
 
 #listview {
@@ -187,7 +175,6 @@
 
 #element-text {
 	margin: 10px 0px 0px 0px;
-    text-color: inherit;
 }
 
 #element-icon {
@@ -196,48 +183,17 @@
 	padding: 5px;
 }
 
-#element.normal.normal {
+#element.normal.normal,
+element.normal.urgent,
+element.selected.urgent,
+element.alternate.normal  {
 	background-color: @selected-active-background;
-	text-color: @normal-foreground;
 }
 
-#element.normal.urgent {
-	background-color: @urgent-background;
-	text-color: @urgent-foreground;
-}
-
-#element.normal.active {
-	background-color: @selected-active-background;
-	text-color: @active-foreground;
-}
-
-// Highlighted item
-#element.selected.normal {
+#element.normal.active,
+element.selected.normal,
+element.selected.active {
 	background-color: @selected-normal-background;
-	text-color: @accent;
-}
-
-#element.selected.urgent {
-	background-color: @selected-urgent-background;
-	text-color: @selected-urgent-foreground;
-}
-
-#element.selected.active {
-	background-color: @selected-active-background;
-	text-color: @selected-active-foreground;
-}
-
-#element.alternate.normal {
-	background-color: @selected-active-background;
-	text-color: @alternate-normal-foreground;
-}
-
-#element.alternate.urgent {
-	text-color: @alternate-urgent-foreground;
-}
-
-#element.alternate.active {
-	text-color: @alternate-active-foreground;
 }
 
 #scrollbar {
@@ -254,7 +210,6 @@
 
 #button.selected {
 	background-color: @selected-normal-background;
-	text-color: @selected-normal-foreground;
 }
 
 #inputbar {
@@ -265,31 +220,18 @@
 		user-icon
 	];
 	spacing: 20;
-	text-color: @normal-foreground;
 	padding: 0 15px 0px 0;
 	margin: 0 0 70px 0;
 }
 
-#case-indicator {
-	spacing: 0;
-	text-color: @normal-foreground;
-}
-
 #entry {
 	font: "Noto Sans 24";
-	text-color: @normal-foreground;
 }
 
 #textbox-custom {
     expand: true;
 	content: "Start";
 	font: "Noto Sans 34";
-	text-color: @normal-foreground;
-}
-
-#prompt, button {
-	spacing: 0;
-	text-color: @normal-foreground;
 }
 
 #container-name {
@@ -306,13 +248,11 @@
 	horizontal-align: 1;
 	font: "Noto Sans 17";
 	str: "Dartegnian";
-	text-color: @normal-foreground;
 }
 
 #textbox-secondname {
 	horizontal-align: 1;
 	str: "Velarde";
-	text-color: @normal-foreground;
 }
 
 #user-icon {
