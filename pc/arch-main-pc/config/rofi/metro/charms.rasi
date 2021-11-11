@@ -8,27 +8,7 @@
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
-	accent: #FFFFFF;
-	foreground: @accent;
-	transparent: rgba(0, 0, 0, 0);
-	normal-background: @transparent;
-	normal-foreground: @foreground;
-	urgent-foreground: @foreground;
-	active-foreground: @foreground;
-	selected-normal-foreground: @background;
-	selected-urgent-background: @foreground;
-	selected-urgent-foreground: @background;
-	selected-active-foreground: @foreground;
-	alternate-normal-background: @transparent;
-	alternate-normal-foreground: @foreground;
-	alternate-active-background: @selected-normal-background;
-	alternate-active-foreground: @active-foreground;
-	alternate-urgent-background: @transparent;
-	alternate-urgent-foreground: @urgent-foreground;
-	border-color: @background;
-	separatorcolor: @transparent;
-	background-color: @transparent;
-	spacing: 10;
+	background-color: transparent;
 	text-color: @active-foreground;
 }
 
@@ -112,34 +92,24 @@ button-charms-home {
 	action: "kb-custom-5";
 }
 
-#message {
-	border: 0px;
-	border-color: @separatorcolor;
-	padding: 10 1% 10;
-}
-
 #listview {
 	layout: vertical;
 	columns: 2;
-	lines: 2;
 	fixed-columns: true;
 	spacing: 10px;
 	padding: 10px 10px 10px 110px;
-    border: 0px;
 	margin: 82.5% 60% 4% 2.6%;
 	background-color: #111111cc;
 }
 
 #element {
+	expand: true;
     orientation: vertical;
 	border-color: @selected-normal-background;
-	padding: 0px;
-	expand: true;
 	background-color: transparent;
 }
 
 #element-text {
-	margin: 0px;
 	font: "Noto Sans 28";
 }
 
