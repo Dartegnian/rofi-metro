@@ -1,0 +1,195 @@
+/**
+ * ROFI Color theme
+ * User: dartegnian
+ */
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+	accent: #FFFFFF;
+	foreground: @accent;
+	background: rgba(0, 0, 0, 0.2);
+	transparent: rgba(0, 0, 0, 0);
+	normal-background: @transparent;
+	normal-foreground: @foreground;
+	urgent-foreground: @foreground;
+	active-foreground: @foreground;
+	selected-normal-foreground: @background;
+	selected-urgent-background: @foreground;
+	selected-urgent-foreground: @background;
+	selected-active-foreground: @foreground;
+	alternate-normal-background: @transparent;
+	alternate-normal-foreground: @foreground;
+	alternate-active-background: @selected-normal-background;
+	alternate-active-foreground: @active-foreground;
+	alternate-urgent-background: @transparent;
+	alternate-urgent-foreground: @urgent-foreground;
+	border-color: @background;
+	separatorcolor: @transparent;
+	background-color: @transparent;
+	spacing: 10;
+}
+
+#window {
+	fullscreen: true;
+	background-color: @active-background;
+	border: 0px;
+	border-color: @selected-active-background;
+	padding: 0px;
+}
+
+#mainbox {
+	border: 0;
+	padding: 6%;
+}
+
+#message {
+	border: 2px 0px 0px;
+	border-color: @separatorcolor;
+	padding: 10 1% 10;
+}
+
+#textbox {
+	text-color: @foreground;
+}
+
+#textbox-prompt-colon {
+    expand: false;
+    str: "";
+    margin: 0px;
+    text-color: @normal-foreground;
+}
+
+#listview {
+	columns: 6;
+	spacing: 10px;
+	padding: 10px 0% 10px;
+    border: 0px;
+	border-color: @selected-normal-background;
+}
+
+#element {
+    orientation: vertical;
+	border: 0px;
+	border-color: @selected-normal-background;
+	padding: 10px 10px 10px;
+	width: 20px;
+	expand: false;
+	background-color: @selected-active-background;
+}
+
+#element-text {
+    text-color: inherit;
+}
+
+#element-icon {
+	horizontal-align: 0.5;
+    size: 49px;
+}
+
+#element.normal.normal {
+	background-color: @selected-active-background;
+	text-color: @normal-foreground;
+}
+
+#element.normal.urgent {
+	background-color: @urgent-background;
+	text-color: @urgent-foreground;
+}
+
+#element.normal.active {
+	background-color: @selected-active-background;
+	text-color: @active-foreground;
+}
+
+// Highlighted item
+#element.selected.normal {
+	background-color: @selected-normal-background;
+	text-color: @accent;
+}
+
+#element.selected.urgent {
+	background-color: @selected-urgent-background;
+	text-color: @selected-urgent-foreground;
+}
+
+#element.selected.active {
+	background-color: @selected-active-background;
+	text-color: @selected-active-foreground;
+}
+
+#element.alternate.normal {
+	background-color: @selected-active-background;
+	text-color: @alternate-normal-foreground;
+}
+
+#element.alternate.urgent {
+	text-color: @alternate-urgent-foreground;
+}
+
+#element.alternate.active {
+	text-color: @alternate-active-foreground;
+}
+
+#scrollbar {
+	width: 14px;
+	border: 0;
+	handle-width: 8px;
+	padding: 0;
+}
+
+#sidebar {
+	border: 2px 0px 0px;
+	border-color: @separatorcolor;
+}
+
+#button.selected {
+	background-color: @selected-normal-background;
+	text-color: @selected-normal-foreground;
+}
+
+#inputbar {
+    children:   [ textbox-custom, entry, case-indicator, textbox-name, user-icon ];
+	spacing: 20;
+	text-color: @normal-foreground;
+	padding: 1px;
+	margin: 0 0 50px 0;
+}
+
+#case-indicator {
+	spacing: 0;
+	text-color: @normal-foreground;
+}
+
+#entry {
+	font: "Noto Sans 24";
+	text-color: @normal-foreground;
+}
+
+#textbox-custom {
+    expand: true;
+	content: "Start";
+	font: "Noto Sans 27";
+	text-color: @normal-foreground;
+}
+
+#prompt, button {
+	spacing: 0;
+	text-color: @normal-foreground;
+}
+
+#textbox-name {
+    expand: false;
+	content: "Dartegnian";
+	padding: 0px;
+	border: 0px;
+	text-color: @normal-foreground;
+}
+
+#user-icon {
+	expand: false;
+	padding: 0px;
+	width: 50px;
+	border: 0px;
+	background-image: url("/usr/share/sddm/faces/dartegnian.face.icon", both);
+}
