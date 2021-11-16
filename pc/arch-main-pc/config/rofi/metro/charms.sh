@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 theme_location=$XDG_CONFIG_HOME/rofi/metro/charms.rasi
-time=$(date +%H:%M)
+time=$(date +%I:%M)
 time_midday=$(date +%p)
 day_name=$(date +%A)
 month_day=$(date "+%B %d")
@@ -30,3 +30,4 @@ case "$exit_code" in
 	*)
 		;;
 esac
+
