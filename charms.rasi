@@ -63,32 +63,32 @@ button-charms-home {
 
 #button-charms-search {
 	content: "Search";
-	background-image: url("./metro/charms/search.png", both);
+	background-image: url("./rofi-metro/charms/search.png", both);
 	action: "kb-custom-1";
 }
 
 #button-charms-browser {
 	content: "Browser";
-	background-image: url("./metro/charms/network.png", both);
+	background-image: url("./rofi-metro/charms/network.png", both);
 	action: "kb-custom-2";
 }
 
 #button-charms-start {
 	content: "Start";
-	background-image: url("./metro/charms/grid.png", both);
+	background-image: url("./rofi-metro/charms/grid.png", both);
 	background-color: @selected-active-background;
 	action: "kb-custom-3";
 }
 
 #button-charms-terminal {
 	content: "Term";
-	background-image: url("./metro/charms/terminal.png", both);
+	background-image: url("./rofi-metro/charms/terminal.png", both);
 	action: "kb-custom-4";
 }
 
 #button-charms-home {
 	content: "Home";
-	background-image: url("./metro/charms/folder.png", both);
+	background-image: url("./rofi-metro/charms/folder.png", both);
 	action: "kb-custom-5";
 }
 

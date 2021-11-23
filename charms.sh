@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-theme_location=$XDG_CONFIG_HOME/rofi/metro/charms.rasi
+theme_location=$XDG_CONFIG_HOME/rofi/rofi-metro/charms.rasi
 time=$(date +%I:%M)
 time_midday=$(date +%p)
 day_name=$(date +%A)
