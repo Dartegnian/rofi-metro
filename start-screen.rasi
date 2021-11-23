@@ -1,5 +1,5 @@
 /**
- * ROFI Metro theme
+ * ROFI Metro: Start screen
  * w/ pywal support
  *
  * Tiles not yet working(!!!)
@@ -18,10 +18,8 @@ configuration {
 	user-photo: url("/usr/share/sddm/faces/dartegnian.face.icon", both);
 
 	foreground: #FFFFFF;
-	transparent: rgba(0, 0, 0, 0);
-
-	border-color: @transparent;
-	background-color: @transparent;
+	border-color: transparent;
+	background-color: transparent;
 	spacing: 10;
 	text-color: @foreground;
 }
@@ -187,7 +185,7 @@ element.selected.active {
 
 #inputbar {
     children: [
-		textbox-custom,
+		textbox-start-text,
 		entry,
 		container-name,
 		user-icon
@@ -201,7 +199,7 @@ element.selected.active {
 	font: "Noto Sans 24";
 }
 
-#textbox-custom {
+#textbox-start-text {
     expand: true;
 	content: "Start";
 	font: "Noto Sans 34";
