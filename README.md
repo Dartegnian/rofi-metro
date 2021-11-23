@@ -20,3 +20,20 @@ A Charms bar-like Rofi theme with clickable and configurable buttons to launch p
 chmod +x charms.sh
 sh charms.sh
 ```
+
+## How to install
+```
+git clone https://github.com/Dartegnian/rofi-metro ~/.config/rofi/rofi-metro
+```
+
+You may launch the start screen using:
+```
+rofi -show drun -theme $XDG_CONFIG_HOME/rofi/rofi-metro/start-screen.rasi
+```
+
+The charms bar by:
+```
+sh $XDG_CONFIG_HOME/rofi/rofi-metro/charms.sh
+```
+
+Ideally, you should have keybindings for these; or not, your choice.
