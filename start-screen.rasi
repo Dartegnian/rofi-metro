@@ -17,29 +17,13 @@ configuration {
 	user-lastname: "Velarde";
 	user-photo: url("/usr/share/sddm/faces/dartegnian.face.icon", both);
 
-	accent: #FFFFFF;
-	foreground: @accent;
-	background: rgba(0, 0, 0, 0.2);
+	foreground: #FFFFFF;
 	transparent: rgba(0, 0, 0, 0);
-	normal-background: @transparent;
-	normal-foreground: @foreground;
-	urgent-foreground: @foreground;
-	active-foreground: @foreground;
-	selected-normal-foreground: @background;
-	selected-urgent-background: @foreground;
-	selected-urgent-foreground: @background;
-	selected-active-foreground: @foreground;
-	alternate-normal-background: @transparent;
-	alternate-normal-foreground: @foreground;
-	alternate-active-background: @selected-normal-background;
-	alternate-active-foreground: @active-foreground;
-	alternate-urgent-background: @transparent;
-	alternate-urgent-foreground: @urgent-foreground;
-	border-color: @background;
-	separatorcolor: @transparent;
+
+	border-color: @transparent;
 	background-color: @transparent;
 	spacing: 10;
-	text-color: @active-foreground;
+	text-color: @foreground;
 }
 
 #window {
@@ -160,7 +144,7 @@ configuration {
 
 #message {
 	border: 0px;
-	border-color: @separatorcolor;
+	border-color: @border-color;
 	padding: 10 1% 10;
 }
 
@@ -174,11 +158,8 @@ configuration {
 
 #element {
     orientation: vertical;
-	border-color: @selected-normal-background;
 	padding: 10px 10px 10px;
 	width: 20px;
-	expand: false;
-	background-color: @selected-active-background;
 }
 
 #element-text {
@@ -194,29 +175,13 @@ configuration {
 #element.normal.normal,
 element.normal.urgent,
 element.selected.urgent,
-element.alternate.normal  {
+element.alternate.normal {
 	background-color: @selected-active-background;
 }
 
 #element.normal.active,
 element.selected.normal,
 element.selected.active {
-	background-color: @selected-normal-background;
-}
-
-#scrollbar {
-	width: 0px;
-	border: 0;
-	handle-width: 8px;
-	padding: 0;
-}
-
-#sidebar {
-	border: 2px 0px 0px;
-	border-color: @separatorcolor;
-}
-
-#button.selected {
 	background-color: @selected-normal-background;
 }
 
@@ -271,4 +236,9 @@ element.selected.active {
 	margin: 0 0 13px 0;
 	border: 0px;
 	background-image: @user-photo;
+}
+
+#scrollbar,
+sidebar {
+	enabled: false;
 }
