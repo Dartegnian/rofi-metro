@@ -5,6 +5,11 @@
  * Tiles not yet working(!!!)
  */
 
+configuration {
+	font: "Noto Sans 15";
+	show-icons: true;
+}
+
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {

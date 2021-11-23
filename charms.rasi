@@ -5,6 +5,11 @@
  * Charm button presses are handled in charms.sh
  */
 
+configuration {
+	font: "Noto Sans 15";
+	show-icons: false;
+}
+
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
