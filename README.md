@@ -36,4 +36,4 @@ The charms bar by:
 sh $XDG_CONFIG_HOME/rofi/rofi-metro/charms.sh
 ```
 
-Ideally, you should have keybindings for these; or not, your choice.
+Ideally, you should have keybindings for these; or not, your choice. If the XDG variables aren't properly set and the theme shows an error, set your XDG variables properly or just replace `$XDG_CONFIG_HOME` with `~/.config`
