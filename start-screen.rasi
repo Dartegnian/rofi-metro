@@ -6,13 +6,17 @@
  */
 
 configuration {
-	font: "Noto Sans 15";
+	font: "Noto Sans 12";
 	show-icons: true;
 }
 
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
+	user-firstname: "Dartegnian";
+	user-lastname: "Verlarde";
+	user-photo: url("/usr/share/sddm/faces/dartegnian.face.icon", both);
+
 	accent: #FFFFFF;
 	foreground: @accent;
 	background: rgba(0, 0, 0, 0.2);
@@ -36,7 +40,6 @@ configuration {
 	background-color: @transparent;
 	spacing: 10;
 	text-color: @active-foreground;
-	font: "Noto Sans 12";
 }
 
 #window {
@@ -252,12 +255,12 @@ element.selected.active {
 #textbox-firstname {
 	horizontal-align: 1;
 	font: "Noto Sans 17";
-	str: "Dartegnian";
+	str: @user-firstname;
 }
 
-#textbox-secondname {
+#textbox-lastname {
 	horizontal-align: 1;
-	str: "Velarde";
+	str: @user-lastname;
 }
 
 #user-icon {
@@ -267,5 +270,5 @@ element.selected.active {
 	height: 10px;
 	margin: 0 0 13px 0;
 	border: 0px;
-	background-image: url("/usr/share/sddm/faces/dartegnian.face.icon", both);
+	background-image: @user-photo;
 }
