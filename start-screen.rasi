@@ -14,7 +14,7 @@ configuration {
 
 * {
 	user-firstname: "Dartegnian";
-	user-lastname: "Verlarde";
+	user-lastname: "Velarde";
 	user-photo: url("/usr/share/sddm/faces/dartegnian.face.icon", both);
 
 	accent: #FFFFFF;
@@ -245,7 +245,7 @@ element.selected.active {
 #container-name {
 	children: [
 		textbox-firstname,
-		textbox-secondname
+		textbox-lastname
 	];
 	orientation: vertical;
     spacing: 0px;
