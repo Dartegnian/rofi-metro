@@ -10,6 +10,10 @@ A Rofi theme that mimicks Windows 8's Start screen UI.
 rofi -show drun -theme start-screen.rasi
 ```
 
+The tiles currently don't work because there isn't a script that handles their custom keyboard triggers. Pretty sure I have to write a script that functions *closely* to `drun` and use that as a modi or something.
+
+TL;DR tiles don't work, yet.
+
 ## Charms
 
 ![Screenshot of Rofi with the Charms-like bar open](screenshot2.png?raw=true "Charms bar")
