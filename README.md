@@ -25,6 +25,8 @@ chmod +x charms.sh
 sh charms.sh
 ```
 
+The time also doesn't update by the minute. Somehow Rofi doesn't support dynamic/changing variables nor does it have an interval for refreshing results with inputs.
+
 ## How to install
 ```
 git clone https://github.com/Dartegnian/rofi-metro ~/.config/rofi/rofi-metro
@@ -32,17 +34,21 @@ git clone https://github.com/Dartegnian/rofi-metro ~/.config/rofi/rofi-metro
 
 You may launch the start screen using:
 ```
-rofi -show drun -theme $XDG_CONFIG_HOME/rofi/rofi-metro/start-screen.rasi
+rofi -show drun -theme ~/.config/rofi/rofi-metro/start-screen.rasi
 ```
 
-The charms bar by:
-```
-sh $XDG_CONFIG_HOME/rofi/rofi-metro/charms.sh
+Enable the charms bar by:
 ```
 
-Ideally, you should have keybindings for these; or not, your choice. If the XDG variables aren't properly set and the theme shows an error, set your XDG variables properly or just replace `$XDG_CONFIG_HOME` with `~/.config`
+chmod +x charms.sh
+```
 
-The time also doesn't update by the minute. Somehow Rofi doesn't support dynamic/changing variables nor does it have an interval for refreshing results with inputs.
+Open the charms bar by:
+```
+sh ~/.config/rofi/rofi-metro/charms.sh
+```
+
+Ideally, you should have keybindings for these; or not, your choice.
 
 ## Why
 I like Windows 8.
