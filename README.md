@@ -39,7 +39,6 @@ rofi -show drun -theme ~/.config/rofi/rofi-metro/start-screen.rasi
 
 Enable the charms bar by:
 ```
-
 chmod +x charms.sh
 ```
 
